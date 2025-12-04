@@ -109,7 +109,7 @@ p {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-light);
-  height: 90px; /* Slightly taller */
+  height: 64px; /* Thinner */
   display: flex;
   align-items: center;
 }

@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
         </a>
         <div className="nav-links">
           <a href="#solutions" className="nav-link">Soluciones</a>
+          <a href="#benefits" className="nav-link">Beneficios</a>
           <a href="#methodology" className="nav-link">Metodología</a>
-          <a href="#markets" className="nav-link">Mercados</a>
-          <a href="#insights" className="nav-link">Insights</a>
+          <a href="#about" className="nav-link">Nosotros</a>
         </div>
         <div style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
           <a href="#login" className="nav-link">Iniciar Sesión</a>
