@@ -7,11 +7,11 @@ const UserStockCard: React.FC = () => {
       <div className="stock-card-header">
         <div className="user-info">
           <div className="avatar">
-            <img src="https://ui-avatars.com/api/?name=Alex+Dev&background=3b82f6&color=fff" alt="Avatar" style={{borderRadius: '50%', width: '100%', height: '100%'}}/>
+            <img src="https://ui-avatars.com/api/?name=Alex+Dev&background=2563eb&color=fff" alt="Avatar" style={{borderRadius: '50%', width: '100%', height: '100%'}}/>
           </div>
           <div>
-            <div style={{fontWeight: 600, fontSize: '0.9rem'}}>AlexDev</div>
-            <div style={{fontSize: '0.75rem', color: '#a1a1aa'}}>@alex_codes</div>
+            <div style={{fontWeight: 600, fontSize: '0.9rem', color: 'var(--text-main)'}}>AlexDev</div>
+            <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>@alex_codes</div>
           </div>
         </div>
         <div className="stock-price">
@@ -38,7 +38,7 @@ const UserStockCard: React.FC = () => {
       </div>
 
       <div className="floating-badge badge-1">
-        <User size={16} color="#3b82f6" />
+        <User size={16} color="var(--primary)" />
         <span>New Investor</span>
       </div>
 

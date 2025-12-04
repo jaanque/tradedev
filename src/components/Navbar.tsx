@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="container nav-inner">
         <div className="logo">
-          <span style={{color: '#3b82f6'}}>⚡</span> TradeDev
+          <span style={{color: 'var(--primary)'}}>⚡</span> TradeDev
         </div>
         <div className="nav-links">
           <a href="#features" className="nav-link">Características</a>
