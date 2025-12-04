@@ -36,12 +36,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 700;
   letter-spacing: -0.025em; /* Tight tracking for headings */
+  margin-bottom: 2rem; /* Consistent spacing below headings */
 }
 
 h1 {
   font-size: 3.75rem; /* 60px */
   line-height: 1.1;
   font-weight: 800;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -52,11 +54,13 @@ h2 {
 h3 {
   font-size: 1.5rem; /* 24px */
   line-height: 1.3;
+  margin-bottom: 1rem;
 }
 
 p {
   color: var(--text-body);
   margin: 0;
+  line-height: 1.7; /* Breathability */
 }
 
 /* Layout Utilities */
@@ -66,26 +70,33 @@ p {
   padding: 0 2rem;
 }
 
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem; /* More breathing room on large screens */
+  }
+}
+
 .section-padding {
-  padding: 6rem 0;
+  padding: 8rem 0; /* Increased vertical padding for "tranquilidad" */
 }
 
 .grid-cols-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem; /* Wider gap */
+  align-items: center;
 }
 
 .grid-cols-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .grid-cols-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
 }
 
 /* Navbar */
@@ -98,7 +109,7 @@ p {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-light);
-  height: 80px;
+  height: 90px; /* Slightly taller */
   display: flex;
   align-items: center;
 }
@@ -127,7 +138,7 @@ p {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 3.5rem; /* More space between links */
 }
 
 .nav-link {
@@ -147,7 +158,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 1.75rem; /* Larger buttons */
   font-weight: 600;
   font-size: 0.95rem;
   border-radius: var(--radius-sm); /* Sharper corners */
@@ -191,8 +202,8 @@ p {
 
 /* Hero */
 .hero-section {
-  padding-top: 10rem;
-  padding-bottom: 6rem;
+  padding-top: 12rem; /* Lower start */
+  padding-bottom: 8rem;
   background-color: var(--bg-page);
   position: relative;
 }
@@ -200,14 +211,15 @@ p {
 .hero-subtitle {
   font-size: 1.25rem;
   color: var(--text-muted);
-  margin: 1.5rem 0 2.5rem 0;
-  max-width: 540px;
+  margin: 2rem 0 3rem 0; /* More space */
+  max-width: 580px;
   font-weight: 400;
+  line-height: 1.8;
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 /* Financial Card Widget (replacing floating card) */
@@ -215,12 +227,12 @@ p {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01); /* Soft, grounded shadow */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); /* Stronger but softer shadow */
   overflow: hidden;
 }
 
 .widget-header {
-  padding: 1.25rem;
+  padding: 1.5rem;
   border-bottom: 1px solid var(--border-light);
   display: flex;
   justify-content: space-between;
@@ -229,11 +241,11 @@ p {
 }
 
 .widget-body {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .widget-metric {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .metric-label {
@@ -245,7 +257,7 @@ p {
 }
 
 .metric-value {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-main);
   font-feature-settings: "tnum";
@@ -268,32 +280,32 @@ p {
 }
 
 .feature-card {
-  /* No background, clean look */
-  padding-right: 2rem;
+  padding: 0; /* Remove right padding to rely on grid gap */
 }
 
 .feature-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--accent);
 }
 
 .feature-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
 }
 
 .feature-desc {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.8;
+  max-width: 90%;
 }
 
 /* How It Works (Methodology) */
@@ -303,9 +315,9 @@ p {
 
 .timeline-item {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 3rem; /* More left space */
   border-left: 2px solid var(--border-light);
-  padding-bottom: 3rem;
+  padding-bottom: 4rem; /* More bottom space */
 }
 
 .timeline-item:last-child {
@@ -324,14 +336,14 @@ p {
 }
 
 .timeline-content h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Footer */
 .footer {
   background: var(--primary);
   color: #ffffff;
-  padding: 4rem 0;
+  padding: 6rem 0 4rem 0;
   text-align: center;
 }
 
@@ -343,7 +355,7 @@ p {
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 4rem;
   }
 
   .hero-content {
@@ -362,9 +374,19 @@ p {
 
   .grid-cols-2 {
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
   .nav-links {
     display: none;
+  }
+
+  .section-padding {
+    padding: 6rem 0;
   }
 }
