@@ -1,25 +1,47 @@
 import React from 'react';
+import { Users, TrendingUp, Code2, Award } from 'lucide-react';
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="features">
-      <h2>Una Nueva Economía para Devs</h2>
-      <div className="features-grid">
-        <div className="feature-card">
-          <h3>👥 Accionistas vs Followers</h3>
-          <p>Olvídate de los likes. Aquí construyes una comunidad de inversores que creen en tu potencial y crecen contigo.</p>
+    <section id="features" className="features-section">
+      <div className="container">
+        <div className="section-header">
+          <h2>Una Economía de Talento</h2>
+          <p>TradeDev cambia las reglas del juego. Deja de buscar likes y empieza a buscar capital.</p>
         </div>
-        <div className="feature-card">
-          <h3>🪙 Gana Tokens</h3>
-          <p>Mantén tu racha de código, cumple retos diarios e interactúa con la comunidad para ganar tokens de inversión.</p>
-        </div>
-        <div className="feature-card">
-          <h3>📈 Invierte en Talento</h3>
-          <p>Usa tus tokens para comprar acciones de otros desarrolladores. Si ellos crecen, tu portafolio también.</p>
-        </div>
-        <div className="feature-card">
-          <h3>🚀 Presenta Proyectos</h3>
-          <p>Muestra tus side-projects al mundo. El feedback real y la inversión validarán tu trabajo.</p>
+
+        <div className="features-grid">
+          <div className="feature-item">
+            <div className="feature-icon">
+              <Users size={24} />
+            </div>
+            <h3>Accionistas vs Followers</h3>
+            <p>Construye una base de inversores reales. Cuando tú ganas, ellos ganan.</p>
+          </div>
+
+          <div className="feature-item">
+            <div className="feature-icon">
+              <Award size={24} />
+            </div>
+            <h3>Gana Tokens</h3>
+            <p>Mantén tu racha de commits, resuelve bugs y completa retos diarios para minar tokens.</p>
+          </div>
+
+          <div className="feature-item">
+            <div className="feature-icon">
+              <TrendingUp size={24} />
+            </div>
+            <h3>Market Cap Personal</h3>
+            <p>Tu valor fluctúa en tiempo real basado en tu actividad y la confianza de la comunidad.</p>
+          </div>
+
+          <div className="feature-item">
+            <div className="feature-icon">
+              <Code2 size={24} />
+            </div>
+            <h3>Portafolio de Devs</h3>
+            <p>Diversifica invirtiendo en Junior prometedores o Seniors consolidados.</p>
+          </div>
         </div>
       </div>
     </section>

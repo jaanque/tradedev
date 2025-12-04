@@ -10,16 +10,21 @@ def verify_homescreen():
 
             # Wait for key elements to be visible
             page.wait_for_selector(".navbar")
-            page.wait_for_selector(".hero")
-            page.wait_for_selector(".features")
+            page.wait_for_selector(".hero-section")
+            page.wait_for_selector(".features-section")
 
             # Take a screenshot of the top part (Hero)
             page.screenshot(path="verification/homescreen_hero.png")
 
             # Scroll down to features and take another screenshot
-            features = page.locator(".features")
+            features = page.locator(".features-section")
             features.scroll_into_view_if_needed()
             page.screenshot(path="verification/homescreen_features.png")
+
+            # Scroll down to steps and take another screenshot
+            steps = page.locator(".steps-section")
+            steps.scroll_into_view_if_needed()
+            page.screenshot(path="verification/homescreen_steps.png")
 
             print("Screenshots taken successfully")
         except Exception as e:

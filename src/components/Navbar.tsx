@@ -3,12 +3,19 @@ import React from 'react';
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">TradeDev</div>
-      <div className="navbar-links">
-        <a href="#features">Cómo funciona</a>
-        <a href="#about">Nosotros</a>
-        <button className="btn-login">Iniciar Sesión</button>
-        <button className="btn-signup">Unirse</button>
+      <div className="container nav-inner">
+        <div className="logo">
+          <span style={{color: '#3b82f6'}}>⚡</span> TradeDev
+        </div>
+        <div className="nav-links">
+          <a href="#features" className="nav-link">Características</a>
+          <a href="#market" className="nav-link">Mercado</a>
+          <a href="#community" className="nav-link">Comunidad</a>
+        </div>
+        <div style={{display: 'flex', gap: '1rem'}}>
+          <button className="btn btn-ghost">Entrar</button>
+          <button className="btn btn-primary">Unirse</button>
+        </div>
       </div>
     </nav>
   );
