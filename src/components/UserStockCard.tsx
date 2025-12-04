@@ -1,49 +1,63 @@
 import React from 'react';
-import { TrendingUp, User } from 'lucide-react';
+import { TrendingUp, Activity, BarChart2, Globe } from 'lucide-react';
 
 const UserStockCard: React.FC = () => {
   return (
-    <div className="stock-card">
-      <div className="stock-card-header">
-        <div className="user-info">
-          <div className="avatar">
-            <img src="https://ui-avatars.com/api/?name=Alex+Dev&background=2563eb&color=fff" alt="Avatar" style={{borderRadius: '50%', width: '100%', height: '100%'}}/>
-          </div>
-          <div>
-            <div style={{fontWeight: 600, fontSize: '0.9rem', color: 'var(--text-main)'}}>AlexDev</div>
-            <div style={{fontSize: '0.75rem', color: 'var(--text-muted)'}}>@alex_codes</div>
-          </div>
+    <div className="market-widget">
+      <div className="widget-header">
+        <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+            <div style={{width: '32px', height: '32px', background: '#0f172a', color: 'white', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '12px'}}>AD</div>
+            <div>
+                <div style={{fontSize: '0.9rem', fontWeight: '700', color: '#0f172a'}}>ALEX DEV</div>
+                <div style={{fontSize: '0.75rem', color: '#64748b'}}>NASDAQ: ADE</div>
+            </div>
         </div>
-        <div className="stock-price">
-          <span className="price-value">$142.50</span>
-          <div className="price-change">
-            <TrendingUp size={14} />
-            <span>+12.4%</span>
-          </div>
+        <div className="metric-change">
+          <TrendingUp size={16} />
+          <span>+12.4%</span>
         </div>
       </div>
 
-      <div className="stock-graph">
-        {/* Simple SVG Graph simulation */}
-        <svg viewBox="0 0 300 60" preserveAspectRatio="none">
-          <path d="M0,50 Q50,45 100,30 T200,20 T300,5" fill="none" stroke="#10b981" strokeWidth="2" />
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#10b981" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <path d="M0,50 Q50,45 100,30 T200,20 T300,5 V60 H0 Z" fill="url(#gradient)" />
-        </svg>
-      </div>
+      <div className="widget-body">
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem'}}>
+            <div className="widget-metric">
+            <div className="metric-label">Market Cap</div>
+            <div className="metric-value">$1.4M</div>
+            </div>
+            <div className="widget-metric">
+            <div className="metric-label">Volume (24h)</div>
+            <div className="metric-value">452K</div>
+            </div>
+        </div>
 
-      <div className="floating-badge badge-1">
-        <User size={16} color="var(--primary)" />
-        <span>New Investor</span>
-      </div>
+        <div className="widget-metric">
+            <div className="metric-label" style={{marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between'}}>
+                <span>Performance</span>
+                <span style={{color: '#059669'}}>Strong Buy</span>
+            </div>
+            {/* Minimalist chart representation */}
+            <div style={{height: '80px', width: '100%', display: 'flex', alignItems: 'flex-end', gap: '4px'}}>
+                {[40, 55, 45, 60, 75, 65, 80, 70, 85, 95, 90, 100].map((h, i) => (
+                    <div key={i} style={{
+                        flex: 1,
+                        height: `${h}%`,
+                        background: i > 8 ? '#059669' : '#e2e8f0',
+                        borderRadius: '2px 2px 0 0'
+                    }}></div>
+                ))}
+            </div>
+        </div>
 
-      <div className="floating-badge badge-2">
-        <span>🎉 Challenge Completed</span>
+        <div style={{borderTop: '1px solid #e2e8f0', paddingTop: '1rem', marginTop: '1rem', display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#64748b'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+                <Activity size={14} />
+                <span>High Activity</span>
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+                <Globe size={14} />
+                <span>Global Access</span>
+            </div>
+        </div>
       </div>
     </div>
   );

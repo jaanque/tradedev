@@ -1,46 +1,48 @@
 import React from 'react';
-import { Users, TrendingUp, Code2, Award } from 'lucide-react';
+import { ShieldCheck, BarChart3, Briefcase, Globe2 } from 'lucide-react';
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="features-section">
+    <section id="solutions" className="features-section section-padding">
       <div className="container">
-        <div className="section-header">
-          <h2>Una Economía de Talento</h2>
-          <p>TradeDev cambia las reglas del juego. Deja de buscar likes y empieza a buscar capital.</p>
+        <div style={{marginBottom: '4rem'}}>
+          <h2>Infraestructura de Grado Institucional</h2>
+          <p style={{marginTop: '1rem', maxWidth: '600px', color: 'var(--text-muted)'}}>
+             Proporcionamos el marco regulatorio y el fondo de liquidez necesarios para comerciar capital humano a escala. Sin fricción. Transparencia total.
+          </p>
         </div>
 
-        <div className="features-grid">
-          <div className="feature-item">
+        <div className="grid-cols-4">
+          <div className="feature-card">
             <div className="feature-icon">
-              <Users size={24} />
+              <ShieldCheck size={24} />
             </div>
-            <h3>Accionistas vs Followers</h3>
-            <p>Construye una base de inversores reales. Cuando tú ganas, ellos ganan.</p>
+            <h3 className="feature-title">Talento Verificado</h3>
+            <p className="feature-desc">Due diligence rigurosa en cada activo listado. Verificamos habilidades, historial y potencial.</p>
           </div>
 
-          <div className="feature-item">
+          <div className="feature-card">
             <div className="feature-icon">
-              <Award size={24} />
+              <BarChart3 size={24} />
             </div>
-            <h3>Gana Tokens</h3>
-            <p>Mantén tu racha de commits, resuelve bugs y completa retos diarios para minar tokens.</p>
+            <h3 className="feature-title">Valoración en Tiempo Real</h3>
+            <p className="feature-desc">Modelos de precios dinámicos basados en actividad de GitHub, finalización de proyectos y sentimiento del mercado.</p>
           </div>
 
-          <div className="feature-item">
+          <div className="feature-card">
             <div className="feature-icon">
-              <TrendingUp size={24} />
+              <Globe2 size={24} />
             </div>
-            <h3>Market Cap Personal</h3>
-            <p>Tu valor fluctúa en tiempo real basado en tu actividad y la confianza de la comunidad.</p>
+            <h3 className="feature-title">Liquidez Global</h3>
+            <p className="feature-desc">Ejecución instantánea en más de 50 mercados. Intercambia acciones de talento sin barreras geográficas.</p>
           </div>
 
-          <div className="feature-item">
+          <div className="feature-card">
             <div className="feature-icon">
-              <Code2 size={24} />
+              <Briefcase size={24} />
             </div>
-            <h3>Portafolio de Devs</h3>
-            <p>Diversifica invirtiendo en Junior prometedores o Seniors consolidados.</p>
+            <h3 className="feature-title">Portafolios Diversos</h3>
+            <p className="feature-desc">Cobertura de riesgos. Construye un índice equilibrado de ingenieros Junior, Senior y Principal.</p>
           </div>
         </div>
       </div>

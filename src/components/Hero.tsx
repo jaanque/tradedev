@@ -4,21 +4,18 @@ import UserStockCard from './UserStockCard';
 const Hero: React.FC = () => {
   return (
     <section className="hero-section">
-      <div className="hero-glow"></div>
       <div className="container hero-grid">
         <div className="hero-content">
           <h1>
-            Invierte en <br/>
-            <span className="text-primary-gradient">Desarrolladores</span>
-            <br /> no en Proyectos.
+            Capital Humano.<br />
+            Activos Líquidos.
           </h1>
-          <p>
-            La primera red social donde tu talento define tu valor de mercado.
-            Consigue accionistas, cumple retos y haz crecer tu valoración.
+          <p className="hero-subtitle">
+            El primer mercado global de talento desarrollador. Titulizamos la producción profesional, permitiéndote invertir en carreras de alto crecimiento con la precisión de un instrumento financiero.
           </p>
           <div className="hero-actions">
-            <button className="btn btn-primary">Empezar a Invertir</button>
-            <button className="btn btn-ghost">Cómo funciona &rarr;</button>
+            <button className="btn btn-primary">Empezar a Operar</button>
+            <button className="btn btn-secondary">Ver Datos de Mercado</button>
           </div>
         </div>
 
