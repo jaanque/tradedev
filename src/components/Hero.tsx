@@ -1,5 +1,4 @@
 import React from 'react';
-import UserStockCard from './UserStockCard';
 
 const Hero: React.FC = () => {
   return (
@@ -17,10 +16,6 @@ const Hero: React.FC = () => {
             <button className="btn btn-primary">Empezar a Operar</button>
             <button className="btn btn-secondary">Ver Datos de Mercado</button>
           </div>
-        </div>
-
-        <div className="hero-visual">
-          <UserStockCard />
         </div>
       </div>
     </section>
